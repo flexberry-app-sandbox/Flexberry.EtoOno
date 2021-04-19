@@ -1,0 +1,37 @@
+﻿{
+  "applicationCaption": "Eto ono",
+  "applicationTitle": "Eto ono",
+  "items": [
+    {
+      "link": null,
+      "menuName": "eto-ono",
+      "caption": "EtoOno",
+      "title": "EtoOno",
+      "children": [
+        {
+          "link": "i-i-s-eto-ono-оно-l",
+          "menuName": null,
+          "caption": "Оно",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочники",
+      "caption": "Справочники",
+      "title": "Справочники",
+      "children": [
+        {
+          "link": "i-i-s-eto-ono-это-l",
+          "menuName": null,
+          "caption": "Это",
+          "title": "Это",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

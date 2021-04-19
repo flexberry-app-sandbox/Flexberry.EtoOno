@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Оно",
+  "name": "IISEtoOnoОноE",
+  "className": "ОноE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-eto-ono-оно",
+      "modelProjection": "ОноE"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+docker-compose -p etoono up -d

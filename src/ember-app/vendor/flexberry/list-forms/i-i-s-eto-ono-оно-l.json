@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-eto-ono-оно-e",
+  "editForm": "i-i-s-eto-ono-оно-e",
+  "external": false,
+  "caption": "Оно",
+  "name": "IISEtoOnoОноL",
+  "className": "ОноL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-eto-ono-оно",
+      "modelProjection": "ОноL"
+    }
+  ]
+}

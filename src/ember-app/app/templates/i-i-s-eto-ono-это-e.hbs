@@ -1,0 +1,81 @@
+<h3 class="ui header">{{t "forms.i-i-s-eto-ono-это-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.арбуз
+      class=(if (v-get validationObject "арбуз" "isInvalid") "error")
+      label=(t "forms.i-i-s-eto-ono-это-e.арбуз-caption")
+      data-test-i-i-s-eto-ono-это-e-арбуз=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "арбуз" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.что
+      class=(if (v-get validationObject "что" "isInvalid") "error")
+      label=(t "forms.i-i-s-eto-ono-это-e.что-caption")
+      data-test-i-i-s-eto-ono-это-e-что=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "что" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-eto-ono-это-e.оно-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.оно
+      class=(if (v-get validationObject "оно" "isInvalid") "error")
+      displayAttributeName="да"
+      autocomplete=true
+      relationName="оно"
+      projection="ОноL"
+      title=(t "forms.i-i-s-eto-ono-это-e.оно-caption")
+      readonly=readonly
+      componentName="оноLookup"
+      class=(if (v-get validationObject "оно" "isInvalid") "error")
+      data-test-i-i-s-eto-ono-это-e-оно=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "оно" "message")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-eto-ono-это-e.то-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тоGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.то
+      content=model.то
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "то" "isInvalid") "error")
+      data-test-i-i-s-eto-ono-это-e-то=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "то" "message")}}
+  </div>
+</form>

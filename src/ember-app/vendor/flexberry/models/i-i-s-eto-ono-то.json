@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISEtoOnoТо",
+  "modelName": "i-i-s-eto-ono-то",
+  "className": "То",
+  "nameSpace": "IIS.EtoOno",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "что",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "когда",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "это",
+      "relatedTo": "i-i-s-eto-ono-это",
+      "inverse": "то"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТоE",
+      "modelName": "i-i-s-eto-ono-то",
+      "attrs": [
+        {
+          "name": "что",
+          "caption": "Что",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "когда",
+          "caption": "Когда",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

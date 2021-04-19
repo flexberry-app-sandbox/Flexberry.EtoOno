@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISEtoOnoЭто",
+  "modelName": "i-i-s-eto-ono-это",
+  "className": "Это",
+  "nameSpace": "IIS.EtoOno",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "арбуз",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "что",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "оно",
+      "relatedTo": "i-i-s-eto-ono-оно",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "то",
+      "relatedTo": "i-i-s-eto-ono-то",
+      "inverse": "это"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЭтоE",
+      "modelName": "i-i-s-eto-ono-это",
+      "attrs": [
+        {
+          "name": "арбуз",
+          "caption": "Арбуз",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "что",
+          "caption": "Что",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Да",
+          "lookupValueField": "да",
+          "relationName": "Оно",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "да",
+              "caption": "Да",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Оно",
+          "name": "оно",
+          "relatedTo": "i-i-s-eto-ono-оно",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТоE",
+          "caption": "То",
+          "name": "то",
+          "relatedTo": "i-i-s-eto-ono-то",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЭтоL",
+      "modelName": "i-i-s-eto-ono-это",
+      "attrs": [
+        {
+          "name": "арбуз",
+          "caption": "Арбуз",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "что",
+          "caption": "Что",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Оно",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "да",
+              "caption": "Да",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Да",
+          "name": "оно",
+          "relatedTo": "i-i-s-eto-ono-оно",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
